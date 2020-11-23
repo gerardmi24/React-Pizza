@@ -1,14 +1,17 @@
-import React from "react"
+import React from "react";
 
-const Pizza = () => {
+const Pizza = (props) => {
+  console.log(props)
   return(
     <tr>
-      <td>{"Replace Me With Pizza Topping"}</td>
-      <td>{"Replace Me With Pizza Size"}</td>
-      <td>{"Replace Me With Vegatarian"}</td>
+      <td>{props.topping}</td>
+      <td>{props.size}</td>
+      <td>{props.vegetarian ? "Yes" : "No"}</td>
       <td><button type="button" className="btn btn-primary">Edit Pizza</button></td>
+      //add onClick to button
+      //once clicked, populate the form with the data
     </tr>
   )
 }
 
-export default Pizza
+export default Pizza;

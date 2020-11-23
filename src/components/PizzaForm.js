@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 
 const PizzaForm = () => {
   return(
@@ -38,4 +38,4 @@ const PizzaForm = () => {
   )
 }
 
-export default PizzaForm
+export default PizzaForm;

@@ -4,12 +4,20 @@ import PizzaForm from './components/PizzaForm'
 import PizzaList from './containers/PizzaList'
 
 class App extends Component {
+
+  state = { pizza: {} }
+
+  appClickHandler = (pizza_obj) => {
+    console.log("In App!")
+    this.setState({ pizza: pizza_obj })
+  }
+
   render() {
     return (
       <Fragment>
         <Header/>
-        <PizzaForm/>
-        <PizzaList/>
+        <PizzaForm pizza={this.state.pizza_obj} />
+        <PizzaList appClickHandler={this.appClickHandler} />
       </Fragment>
     );
   }

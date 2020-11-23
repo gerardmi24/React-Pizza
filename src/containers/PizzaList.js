@@ -23,7 +23,7 @@ class PizzaList extends Component {
   };
 
     renderPizza = () => {
-      return this.state.pizzas.map(pizza => <Pizza topping={pizza.topping} size={pizza.size} vegetarian={pizza.vegetarian} />)
+      return this.state.pizzas.map(pizza => <Pizza topping={pizza.topping} size={pizza.size} vegetarian={pizza.vegetarian} appClickHandler={this.props.appClickHandler} />)
     }
 
   render(pizzaObj) {
